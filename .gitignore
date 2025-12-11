@@ -2,3 +2,7 @@
 .vs
 Intermediate
 Saved
+Binaries
+DerivedDataCache
+.vsconfig
+UnrealEngineWork.sln
