@@ -1,7 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-using UnrealBuildTool;
+using System.Collections.Generic;
 using System.IO;
+using UnrealBuildTool;
 public class UnrealEngineWork : ModuleRules
 {
 	public UnrealEngineWork(ReadOnlyTargetRules Target) : base(Target)
@@ -17,14 +18,21 @@ public class UnrealEngineWork : ModuleRules
 		 		// "YourProject/Gameplay"  // 也可以用相对路径
 		 		Path.Combine(ModuleDirectory, "Collection") // 更推荐的写法，使用 ModuleDirectory
 		   }
-		);
+        );
 
-		// Uncomment if you are using Slate UI
-		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+        PublicIncludePaths.AddRange(
+            new string[] {
+		 		// "YourProject/Gameplay"  // 也可以用相对路径
+		 		Path.Combine(ModuleDirectory, "Settings") // 更推荐的写法，使用 ModuleDirectory
+		   }
+        );
 
-		// Uncomment if you are using online features
-		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
+        // Uncomment if you are using Slate UI
+        // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 
-		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
-	}
+        // Uncomment if you are using online features
+        // PrivateDependencyModuleNames.Add("OnlineSubsystem");
+
+        // To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
+    }
 }
