@@ -16,6 +16,10 @@ class UNREALENGINEWORK_API ABatteryCollectionGameMode : public AGameModeBase
 
 public :
 	ABatteryCollectionGameMode();
+
+	UFUNCTION(BlueprintPure, Category = "Power")
+	float GetPowerAmounToWin() const;
+
 protected:
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
@@ -23,6 +27,19 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
 	float DecayAmount;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
+	float PowerAmounToWin;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
+	float PowerToWinMultiplier;
+
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power")
+	TSubclassOf<class UUserWidget> MainHUDClass;
+
+	UPROPERTY()
+	class UUserWidget* ActiveWidget;
 	
 	virtual void BeginPlay() override;
 
