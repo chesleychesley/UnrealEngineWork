@@ -29,7 +29,11 @@ protected:
 	virtual void BeginPlay() override;
 
 	bool bIsActive;
+#pragma region COMPONENTS
+	UPROPERTY(EditAnywhere, Category = "VALUE")
+	UStaticMeshComponent* PickupMesh  ;
 
+#pragma endregion
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

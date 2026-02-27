@@ -10,8 +10,9 @@ AMyActor::AMyActor()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	/*PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Pickup Mesh"));
-	RootComponent = PickupMesh;*/
+	PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickuoMesh"));
+	RootComponent = PickupMesh;
+	 
 
 	bIsActive = true;
 
