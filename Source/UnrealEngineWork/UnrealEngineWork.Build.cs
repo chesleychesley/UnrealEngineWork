@@ -30,7 +30,7 @@ public class UnrealEngineWork : ModuleRules
         PublicIncludePaths.AddRange(
             new string[] {
 		 		// "YourProject/Gameplay"  // 也可以用相对路径
-		 		Path.Combine(ModuleDirectory, "Gameplay") // 更推荐的写法，使用 ModuleDirectory
+		 		Path.Combine(ModuleDirectory, "GamePlay") // 更推荐的写法，使用 ModuleDirectory
 		   }
         );
 
