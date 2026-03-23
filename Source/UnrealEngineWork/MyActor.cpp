@@ -39,3 +39,4 @@ void AMyActor::SetPickupIsActive(bool IsActive) {
 	bIsActive = IsActive;
 }
 
+
